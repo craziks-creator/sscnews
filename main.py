@@ -34,7 +34,8 @@ ie1.set_paragraph_selector('#forScrollNews > ul > li > a')
 ie1.set_time_selector('span')
 ie1.set_source_selector('span.sourceTemplate')
 ie1.max_post_length = 2000
-ie1.set_id_policy(ssc_id_policy)
+
+#ie1.set_id_policy(ssc_id_policy)
 # News postman to manage sending affair
 np1 = NewsPostman(listURLs=[url1, ], sendList=[channel,channel2, ], db=db, tag=tag1)
 np1.set_bot_token(bot_token)
