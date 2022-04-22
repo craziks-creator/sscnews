@@ -1,23 +1,27 @@
 {
-    "name": "Fortytele",
-    "logo": "https://telegra.ph//file/7db6d5303399b8a92bb95.jpg",
-    "description": "App for SSC updates",
-    "keywords": [
-        "SSC",
-        "telegram",
-        "updates"
-    ],
-    "repository": "https://github.com/craziks-creator/notofssc",
-    "stack": "heroku-20",
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+	"name": "Telegram-news",
+	"description": "A demo for telegram-news deploy.",
+	"repository": "https://github.com/ESWZY/telegram-news-deploy",
+	"addons": [{
+		"plan": "heroku-postgresql:hobby-dev"
+	}],
+	"env": {
+		"TOKEN": {
+			"description": "Bot token obtained from @BotFather. Don't forget to invite your bot into the channel and make admin.",
+			"value": "1234567890:asfghjklASDFGHJKL_A123"
+		},
+		"CHANNEL": {
+			"description": "Channel ID to push messages.",
+			"value": "@yourchannel"
+		},
+		"CHANNEL2": {
+			"description": "Channel ID to push messages.",
+			"value": "@yourchannel"
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/python"
+		}
+	]
 }
